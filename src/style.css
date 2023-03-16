@@ -1,7 +1,25 @@
 h1 {
-  color: hotpink;
+  margin-bottom: 0;
 }
 
 .sun-icon {
   font-size: 90px;
+}
+
+.weather-app-box {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 40px;
+  border: 1px solid rgb(244, 197, 55);
+  padding: 30px;
+  border-radius: 5px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
