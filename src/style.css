@@ -2,8 +2,18 @@ h1 {
   margin-bottom: 0;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .sun-icon {
-  font-size: 90px;
+  font-size: 60px;
 }
 
 .weather-app-box {
@@ -14,12 +24,13 @@ h1 {
   padding: 30px;
   border-radius: 5px;
 }
-ul {
-  margin: 0;
-  padding: 0;
+.header-overview {
+  padding-bottom: 20px;
 }
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.temperature {
+  font-size: 60px;
+}
+.units {
+  position: relative;
+  top: -30px;
 }
