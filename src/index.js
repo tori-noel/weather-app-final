@@ -40,7 +40,6 @@ function showTemperature(response) {
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
-  console.log(response.data);
 }
 function search(city) {
   let apiKey = "43fa5d86069t4dbb87a934b227c8ob50";
