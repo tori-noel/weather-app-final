@@ -35,9 +35,14 @@ function showTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   let timeElement = document.querySelector("#date");
   timeElement.innerHTML = formatDate(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
   console.log(response.data);
 }
-let city = "Paris";
+let city = "New York";
 let apiKey = "43fa5d86069t4dbb87a934b227c8ob50";
 let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
 
