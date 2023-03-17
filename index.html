@@ -14,29 +14,29 @@
       src="https://kit.fontawesome.com/91e7fd2f9f.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
       <div class="weather-app-box">
         <div class="header-overview">
-          <h1 id="city">Location</h1>
+          <h1 id="city"></h1>
           <ul>
             <li>Today (date)</li>
-            <li>Forecast Description</li>
+            <li id="description"></li>
           </ul>
         </div>
         <div class="row">
           <div class="col-6">
             <i class="fa-solid fa-cloud-sun sun-icon"></i>
-            <span class="temperature">75</span>
-            <span class="units">F°|C°</span>
+            <span class="temperature" id="temperature"></span>
+            <span class="units" id="units">F°|C°</span>
           </div>
           <div class="col-6">
             <ul>
-              <li>Precipitation</li>
-              <li>Humidity</li>
-              <li>Wind</li>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> mph</li>
             </ul>
           </div>
         </div>
