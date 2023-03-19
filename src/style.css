@@ -49,3 +49,6 @@ li :first-letter {
 .weather-temperature .inactive {
   text-decoration: none;
 }
+.git-link {
+  text-decoration: none;
+}
