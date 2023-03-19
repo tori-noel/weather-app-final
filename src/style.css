@@ -36,7 +36,6 @@ li :first-letter {
 .units {
   position: relative;
   top: -30px;
-  text-decoration: none;
 }
 
 .weather-temperature .active {
@@ -45,5 +44,8 @@ li :first-letter {
   text-decoration: none;
 }
 .weather-temperature .active:hover {
+  text-decoration: none;
+}
+.weather-temperature .inactive {
   text-decoration: none;
 }
