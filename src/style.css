@@ -52,3 +52,19 @@ li :first-letter {
 .git-link {
   text-decoration: none;
 }
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+.weather-forecast-min {
+  opacity: 0.6;
+}
