@@ -20,7 +20,13 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
-
+function getForecast(city) {
+  console.log(city);
+  let apiKey = "43fa5d86069t4dbb87a934b227c8ob50";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
 function showTemperature(response) {
   console.log(response.data.temperature.current);
   let temperatureElement = document.querySelector("#temperature");
@@ -41,6 +47,7 @@ function showTemperature(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
   fahrenheitTemperature = Math.round(response.data.temperature.current);
+  getForecast(response.data.city);
 }
 function search(city) {
   let apiKey = "43fa5d86069t4dbb87a934b227c8ob50";
@@ -73,7 +80,8 @@ function showFahrenheit(event) {
   fahrenheitLink.classList.remove("inactive");
   celsiusLink.classList.add("inactive");
 }
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class=row>`;
   let days = ["Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
@@ -112,4 +120,3 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheit);
 
 search("Brooklyn");
-displayForecast();
