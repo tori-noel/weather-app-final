@@ -22,14 +22,12 @@ function formatDate(timestamp) {
 }
 
 function getForecast(city) {
-  console.log(city);
   let apiKey = "43fa5d86069t4dbb87a934b227c8ob50";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
 function showTemperature(response) {
-  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   let cityElement = document.querySelector("#city");
@@ -84,7 +82,7 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class=row>`;
-  console.log(response.data.daily);
+
   forecast.forEach(function (forecastDay, index) {
     if (index < 6)
       forecastHTML =
