@@ -18,6 +18,14 @@ body {
     rgb(160, 199, 254) 74.6%
   );
 }
+.dark {
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
+  color: rgb(226, 235, 255);
+}
 li :first-letter {
   text-transform: capitalize;
 }
@@ -29,9 +37,12 @@ li :first-letter {
   max-width: 600px;
   margin: 0 auto;
   margin-top: 40px;
-  border: 1px solid rgb(244, 197, 55);
+  border: 5px solid rgb(244, 197, 55);
   padding: 30px;
-  border-radius: 5px;
+  border-radius: 200px;
+}
+.dark .weather-app-box {
+  border: 5px solid rgb(133, 172, 246);
 }
 .header-overview {
   padding-bottom: 20px;
@@ -73,4 +84,9 @@ li :first-letter {
 }
 .weather-forecast-min {
   opacity: 0.6;
+}
+small {
+  position: relative;
+  margin-left: 370px;
+  margin-top: 40px;
 }

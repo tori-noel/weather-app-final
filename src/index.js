@@ -24,7 +24,7 @@ function formatDate(timestamp) {
 function getForecast(city) {
   let apiKey = "43fa5d86069t4dbb87a934b227c8ob50";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
-  console.log(apiUrl);
+
   axios.get(apiUrl).then(displayForecast);
 }
 function showTemperature(response) {
@@ -58,16 +58,6 @@ function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
-}
-
-function showFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = fahrenheitTemperature;
-  fahrenheitLink.classList.add("active");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.remove("inactive");
-  celsiusLink.classList.add("inactive");
 }
 
 function formatDay(timestamp) {
@@ -115,12 +105,16 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-let fahrenheitTemperature = null;
+function changeThemeNight() {
+  let body = document.querySelector("body");
+  let hours = 20;
+  if (hours > 17) {
+    body.classList.add("dark");
+  }
+}
+changeThemeNight();
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheit);
 
 search("Brooklyn");
