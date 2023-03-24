@@ -92,10 +92,10 @@ function displayForecast(response) {
                 <div class="weather-forecast-temperatures">
                   <span class="weather-forecast-max"> ${Math.round(
                     forecastDay.temperature.maximum
-                  )}</span>
-                  <span class="weather-forecast-min"> ${Math.round(
-                    forecastDay.temperature.minimum
-                  )} </span>
+                  )}° </span>
+                   <span class="weather-forecast-min"> ${Math.round(
+                     forecastDay.temperature.minimum
+                   )}°</span>
                 </div>
              </div>
             `;
@@ -107,7 +107,8 @@ function displayForecast(response) {
 
 function changeThemeNight() {
   let body = document.querySelector("body");
-  let hours = 20;
+  let date = new Date();
+  let hours = date.getHours();
   if (hours > 17) {
     body.classList.add("dark");
   }
