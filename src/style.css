@@ -31,6 +31,9 @@ body {
 li :first-letter {
   text-transform: capitalize;
 }
+.description:first-letter {
+  text-transform: capitalize;
+}
 .btn {
   background-color: rgb(244, 197, 55);
   width: 80px;
@@ -84,7 +87,7 @@ li :first-letter {
 }
 
 small {
-  position: relative;
+  position: absolute;
   margin-left: 370px;
   margin-top: 40px;
 }

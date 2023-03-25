@@ -8,6 +8,9 @@ function formatDate(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+  if (hours > 17) {
+    body.classList.add("dark");
+  }
   let days = [
     "Sunday",
     "Monday",
@@ -104,16 +107,6 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-
-function changeThemeNight() {
-  let body = document.querySelector("body");
-  let date = new Date();
-  let hours = date.getHours();
-  if (hours > 17) {
-    body.classList.add("dark");
-  }
-}
-changeThemeNight();
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
