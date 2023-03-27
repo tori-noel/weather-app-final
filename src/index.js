@@ -1,16 +1,19 @@
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
+  let body = document.querySelector("body");
   if (hours < 10) {
     hours = `0${hours}`;
   }
+  if (hours > 20) {
+    body.classList.add("dark");
+  }
+
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  if (hours > 17) {
-    body.classList.add("dark");
-  }
+
   let days = [
     "Sunday",
     "Monday",

@@ -20,6 +20,11 @@ body {
   color: rgb(50, 58, 103);
   font-family: "Questrial", sans-serif;
 }
+small {
+  position: sticky;
+  margin-left: 340px;
+}
+
 .dark {
   background: linear-gradient(
     112.1deg,
@@ -57,9 +62,15 @@ li :first-letter {
 .header-overview {
   padding-bottom: 20px;
 }
+.weather-temperature {
+  text-align: center;
+}
 
 .temperature {
-  font-size: 60px;
+  font-size: 80px;
+}
+.icon {
+  font-size: 80px;
 }
 .units {
   position: relative;
@@ -84,10 +95,4 @@ li :first-letter {
 }
 .weather-forecast-min {
   opacity: 0.6;
-}
-
-small {
-  position: absolute;
-  margin-left: 370px;
-  margin-top: 40px;
 }
