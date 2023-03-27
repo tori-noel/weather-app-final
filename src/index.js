@@ -5,10 +5,12 @@ function formatDate(timestamp) {
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  if (hours > 20) {
+  if (hours > 19) {
     body.classList.add("dark");
   }
-
+  if (hours > 15 && hours < 19) {
+    body.classList.add("afternoon");
+  }
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
